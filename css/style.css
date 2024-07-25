@@ -1,0 +1,12 @@
+& {
+    --main-clr: #131735;
+    --dark-clr: #222;
+    --big-fz: calc(25px + (45-25) * ((100vw + 300px) / (1500 - 300)));
+    --medium-fz: calc(20px + (35 - 20) * ((100vw + 300px) / (1500 - 300)));
+    --small-fz: calc(12px + (18 - 12) * ((100vw + 300px) / (1500 - 300)));
+    --box-shadow: 0.5rem 1rem rgba(0, 0, 0, .5);
+}
+
+body {
+    background-color: var(--main-clr);
+}
