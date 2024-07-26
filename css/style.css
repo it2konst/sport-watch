@@ -11,6 +11,25 @@ body {
     background-color: var(--main-clr);
 }
 
+section {
+    min-height: 100vh;
+    padding: 0rem 8%;
+}
+
+.btn {
+    padding: 0.7rem 3rem;
+    font-size: var(--small-fz);
+    color: #fff;
+    background-color: var(--dark-clr);
+    cursor: pointer;
+    text-transform: capitalize;
+    box-shadow: var(--box-shadow);
+}
+
+.btn:hover {
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.9);
+}
+
 /* header section start */
 header {
     width: 100%;
@@ -78,10 +97,42 @@ header #menu {
 
 /* header section end */
 
+/* home section start */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 9rem;
+}
+
+.home .image {
+    padding: 1rem;
+    flex: 1 1 4orem;
+    text-align: center;
+}
+
+.home .content {
+    padding: 1rem;
+    flex: 1 1 40rem;
+}
+
+.home .content h2 {
+    font-size: var(--big-fz);
+    color: M#fff;
+    line-height: 1;
+}
+
+.home .content p {
+    font-size: var(--small-fz);
+    color: #fff;
+    margin: 2rem 0rem;
+}
+
+/* home section end */
 
 
 /* media queries */
-
 @media (max-width: 820px) {
     header #menu {
         display: block
