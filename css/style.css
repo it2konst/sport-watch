@@ -10,3 +10,112 @@
 body {
     background-color: var(--main-clr);
 }
+
+/* header section start */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--dark-clr);
+    z-index: 99;
+    padding: 2rem 8%;
+    box-shadow: var(--box-shadow);
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+header .logo img {
+    width: 3rem;
+}
+
+header span {
+    font-size: var(--medium-fz);
+    color: #fff;
+}
+
+header .navbar ul {
+    display: flex;
+    gap: 2rem;
+}
+
+header .navbar ul li a {
+    font-size: var(--small-fz);
+    color: #fff;
+    position: relative;
+    text-transform: capitalize;
+}
+
+header .navbar ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    right: 0;
+    width: 0%;
+    height: 0.2rem;
+    background-color: dodgerblue;
+    transition: 0.3s linear;
+}
+
+header .navbar ul li a:hover::before {
+    left: 0;
+    width: 100%;
+}
+
+header #menu {
+    font-size: var(--medium-fz);
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+/* header section end */
+
+
+
+/* media queries */
+
+@media (max-width: 820px) {
+    header #menu {
+        display: block
+    }
+
+    header .navbar {
+        position: fixed;
+        left: 0;
+        top: -120%;
+        width: 100%;
+        background-color: #fff;
+    }
+
+    header .navbar.active {
+        top: 9.2rem;
+    }
+
+    header .navbar ul {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    header .navbar ul li {
+        width: 100%;
+        text-align: 100%;
+    }
+
+    header .navbar ul li a {
+        display: block;
+        background-color: var(--main-clr);
+        padding: 1rem;
+    }
+
+    header .fa-times {
+        transform: rotate(90deg);
+    }
+}

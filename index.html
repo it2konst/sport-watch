@@ -18,9 +18,11 @@
 </head>
 
 <body>
+
     <!-- header section start-->
     <header>
         <a href="" class="logo"><img src="./img/logo.png" alt=""><span>Sport Watch</span></a>
+        <div id="menu" class="fas fa-bars"></div>
         <nav class="navbar">
             <ul>
                 <li><a href="#home">home</a></li>
@@ -28,11 +30,27 @@
                 <li><a href="#features">features</a></li>
                 <li><a href="#product">product</a></li>
                 <li><a href="#contact">contact</a></li>
-                <li><a href="#cart">cart</a></li>
+                <li><a href="#cart">cart <i class="fa-solid fa-cart-shopping"></i></a></li>
             </ul>
         </nav>
     </header>
     <!-- header section end -->
+
+    <!-- home section start-->
+    <home>
+
+    </home>
+    <!-- home section end-->
+
+
+    <script>
+        let menu = document.querySelector('#menu');
+        let navbar = document.querySelector('.navbar');
+        menu.onclick = () => {
+            menu.classList.toggle('fa-times');
+            navbar.classList.toggle('active');
+        }
+    </script>
 
 </body>
 
